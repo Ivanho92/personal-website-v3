@@ -1,0 +1,202 @@
+---
+import Icon from 'astro-icon';
+
+import { Image } from 'astro:assets';
+import logo from '@images/logo.png';
+---
+
+<header
+	class="[ header ] [ full-width section bg-white ]"
+	style="--section-padding: var(--space-md)"
+>
+	<div>
+		<a href="#">
+			<Image src={logo} alt="" width=45 height=45 class='header__logo'  data-aos="fade-down-left" />
+		</a>
+
+		<nav id="nav-menu" class="nav" data-aos="fade-down-right">
+			<button id="toggle-nav" class="[ toggle-nav ] [ p-0 fs-700 ]" data-btn-variant="secondary"
+				><Icon name="burger-menu" class="svg-icon interactive-icon" /></button
+			>
+
+			<ul
+				class="desktop-nav flex-group clr-primary"
+				role="list"
+				style="--flex-column-gap: var(--space-lg)"
+			>
+				<li><a href="#" data-state="active">Home</a></li>
+				<li><a href="#about">About</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
+				<li>
+					<a
+						href="#contact"
+						class="btn"
+						data-btn-variant="secondary"
+						style="--btn-padding: 10px; --btn-padding-inline: 1rem">Contact me</a
+					>
+				</li>
+			</ul>
+
+			<div id="mobile-nav" class="mobile-nav">
+				<button id="close-nav" class="[ close-nav ] [ button-reset fs-700 ]">
+					<Icon
+						name="close"
+						width="30"
+						class="interactive-icon svg-icon"
+					/>
+				</button>
+				<ul role="list" class="fs-600">
+					<li><a href="#" data-state="active">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li>
+						<a
+							href="#contact"
+							class="btn"
+							data-btn-variant="secondary"
+							style="--btn-padding: var(--space-sm)">Contact me</a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<style lang="scss">
+	@use '@styles/abstracts' as *;
+
+	header {
+		/* z-index: 99;
+		position: fixed;
+		width: 100%; */
+
+		& > div:first-child {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			gap: 1.5em;
+		}
+	}
+
+	.header__logo {
+		cursor: pointer;
+	}
+
+	.nav {
+		list-style: none;
+
+		& .toggle-nav {
+			display: none;
+
+			cursor: pointer;
+			border: none;
+			background-color: transparent;
+
+			&:is(:hover, :focus) > svg {
+				color: var(--clr-primary);
+			}
+		}
+
+		& a {
+			color: var(--clr-dark);
+			text-decoration: none;
+
+			&:is(:hover, :focus) {
+				color: var(--clr-primary);
+				text-decoration: underline;
+			}
+		}
+
+		& .btn[data-btn-variant='secondary'] {
+			color: var(--clr-primary);
+
+			&:is(:hover, :focus) {
+				color: var(--clr-white);
+				text-decoration: none;
+			}
+		}
+
+		& .mobile-nav {
+			position: fixed;
+			background: white;
+			z-index: -1;
+			opacity: 0;
+			visibility: hidden;
+
+			translate: (10%);
+		}
+
+		& .mobile-nav[data-state-expanded] {
+			opacity: 1;
+			z-index: 99;
+			visibility: visible;
+
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+
+			translate: (0);
+
+			transition: translate 300ms ease, opacity 200ms ease;
+
+			// transition: all 100ms ease;
+
+			& > ul {
+				display: grid;
+				place-items: center;
+				align-content: center;
+				height: 100%;
+				gap: 2rem;
+			}
+		}
+
+		& .close-nav {
+			position: fixed;
+			top: var(--space-lg);
+			right: var(--space-lg);
+			cursor: pointer;
+
+			&:is(:hover, :focus) > svg {
+				color: var(--clr-primary);
+			}
+		}
+
+		@media (width <= $breakpoint-small) {
+			& > .desktop-nav {
+				display: none;
+			}
+
+			& .toggle-nav {
+				display: block;
+			}
+		}
+	}
+</style>
+
+<script>
+	(() => {
+		const openMenuBtn = document.getElementById('toggle-nav');
+		const closeMenuBtn = document.getElementById('close-nav');
+		const navMenu = document.getElementById('mobile-nav');
+		const menuLinks = navMenu?.querySelectorAll('.mobile-nav > ul > *');
+
+		if (!openMenuBtn || !closeMenuBtn || !navMenu || !menuLinks) return;
+
+		Array.from(menuLinks).forEach((el) =>
+			el.addEventListener('click', () =>
+				navMenu?.removeAttribute('data-state-expanded')
+			)
+		);
+
+		openMenuBtn?.addEventListener('click', () => {
+			navMenu?.setAttribute('data-state-expanded', '');
+		});
+
+		closeMenuBtn?.addEventListener('click', () => {
+			navMenu?.removeAttribute('data-state-expanded');
+		});
+	})();
+</script>

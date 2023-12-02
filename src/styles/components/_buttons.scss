@@ -1,0 +1,103 @@
+.btn {
+  font-size: var(--btn-fs-base);
+  padding-block: var(--btn-padding-block, var(--btn-padding, 1em));
+  padding-inline: var(--btn-padding-inline, var(--btn-padding, 1em));
+  border-radius: var(--btn-border-radius, 3px);
+
+	background-color: var(--clr-primary);
+	border: none;
+	color: var(--clr-white);
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+  line-height: 1;
+  
+  cursor: pointer;
+  
+  transition: all 150ms ease-in;
+}
+
+.btn, .btn-link {
+  @media (width <= 700px) {
+    width: var(--btn-responsive-width, 100%);
+    display: block;
+    text-align: center;
+  }
+}
+
+
+.btn[data-btn-size="sm"] {
+  --padding-block: var(--space-xs);
+  --padding-inline: var(--space-sm);
+  --border-radius: 3px;
+}
+
+.btn:is(:hover, :focus),
+.btn[data-btn-variant="primary"]:is(:hover, :focus) {
+  color: var(--clr-white);
+  background-color: var(--clr-primary-shade);
+}
+
+.btn[data-btn-variant="secondary"] {
+  color: var(--clr-primary);
+  background-color: var(--bg-color, transparent);
+  box-shadow:
+    inset -1px 0 0 var(--clr-primary),
+    inset 0 -1px 0 var(--clr-primary),
+    inset 1px 0 0 var(--clr-primary),
+    inset 0 1px 0 var(--clr-primary);
+}
+
+.btn[data-btn-variant="secondary"]:is(:hover,:focus) {
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+}
+
+.btn:disabled {
+  cursor: auto;
+  color: var(--clr-light-neutral);
+  box-shadow:
+    inset -1px 0 0 var(--clr-light-neutral),
+    inset 0 -1px 0 var(--clr-light-neutral),
+    inset 1px 0 0 var(--clr-light-neutral),
+    inset 0 1px 0 var(--clr-light-neutral);
+
+  &:hover {
+    color: var(--clr-light-neutral);
+    background-color: initial;
+  }
+}
+
+
+
+// .btn[data-btn-variant="link"] {
+//   color: var(--clr-primary);
+//   background-color: transparent;
+//   text-decoration: underline;
+//   text-underline-offset: 4px;
+//   text-decoration-color: var(--clr-medium);
+//   text-decoration-thickness: 1.25px;
+// }
+
+// .btn[data-btn-variant="link"]:hover,
+// .btn[data-btn-variant="link"]:focus {
+//   color: var(--clr-primary-shade);
+//   background-color: transparent;
+// }
+
+
+
+
+/* .button-link {
+  color: var(--color-primary);
+  background-color: transparent;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: var(--color-medium);
+  text-decoration-thickness: 1.25px;
+}
+
+.button-link:hover {
+  color: var(--color-primary-shade);
+  text-decoration-color: transparent;
+} */

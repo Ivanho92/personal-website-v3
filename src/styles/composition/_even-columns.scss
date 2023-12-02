@@ -1,0 +1,61 @@
+@use "@styles/abstracts" as *;
+
+// .even-columns {
+//   display: grid;
+//   gap: var(--grid-gap, 1rem);
+
+//   @media (width <= $breakpoint-medium) {
+//     grid-auto-flow: column;
+//     grid-auto-columns: 1fr;
+//   }
+// }
+
+.even-columns {
+  display: flex;
+  row-gap: var(--row-gap, var(--gap, var(--space-xl, 1rem)));
+  column-gap: var(--column-gap, var(--gap, var(--space-xl, 1rem)));
+
+  & > * {
+    flex: 1;
+  }
+  
+  @media (width <= $breakpoint-medium) {
+    flex-direction: column;
+  }
+
+  &[data-breakpoint="small"], 
+  &[data-breakpoint="phone"] {
+    @media (width <= $breakpoint-medium) {
+      flex-direction: row;
+    }
+    
+    @media (width <= $breakpoint-small) {
+      flex-direction: column;
+    }
+  }
+}
+
+.even-columns-grid {
+  display: grid;
+
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+
+  row-gap: var(--row-gap, var(--gap, var(--space-xl, 1rem)));
+  column-gap: var(--column-gap, var(--gap, var(--space-xl, 1rem)));
+ 
+  @media (width <= $breakpoint-medium) {
+    grid-auto-flow: row;
+  }
+
+  &[data-breakpoint="small"], 
+  &[data-breakpoint="phone"] {
+    @media (width <= $breakpoint-medium) {
+      grid-auto-flow: column;
+    }
+    
+    @media (width <= $breakpoint-small) {
+      grid-auto-flow: row;
+    }
+  }
+}

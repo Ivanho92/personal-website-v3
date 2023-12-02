@@ -1,0 +1,29 @@
+---
+import { Image } from 'astro:assets';
+import profilePicture from '@images/profile-picture2.png';
+
+import './TheHero.scss';
+---
+
+<section id="home" class="[ hero ] [ full-width bg-light ]" data-aos="fade-in">
+	<div class="even-columns">
+		<div class="[ hero__intro ] [ flow ]" data-aos="fade-in">
+			<h1 class="ff-base fw-regular letter-spacing-base flow" style="--flow-spacer: var(--space-xs)">
+				<span class="clr-dark fw-base fs-500">Hello👋, I'm</span>
+				<span class="heading-title">Ivan Rodrigues</span>
+				<span class="clr-dark fw-base fs-400">Frontend Engineer</span>
+			</h1>
+			<a href="#portfolio" class="btn">
+				Open Portfolio
+			</a>
+			<ul class="[ hero__social-links ] [ flex-group list-reset fs-300 ]">
+				<a href="https://www.linkedin.com/in/ivanrodrigues92/" target="_blank">Linkedin</a>
+				<a href="https://github.com/Ivanho92" target="_blank">Github</a>
+			</ul>
+		</div>
+		<div>
+			<Image src={profilePicture} alt="" class="[ hero__profile-picture ] [ image-background ]" data-aos="fade-left" data-aos-delay="300" data-aos-duration="1500" />
+		</div>
+	</div>
+	<div class="[ hero__shape ] [ full-bleed ]"></div>
+</section>

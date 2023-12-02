@@ -1,0 +1,40 @@
+---
+import { Image } from 'astro:assets';
+import aboutImage from '@images/frontend-dev-working-4-tinted-removebg-preview-cropped.png';
+
+import './TheAbout.scss';
+---
+
+<section id="about" class="[ about ] [ section ]">
+	<div class="[ about__container ] [ even-columns ]">
+		<Image
+			src={aboutImage}
+			alt=""
+			class="image-center image-background"
+			style="--grayscale: 0; --opacity: 0.05;"
+			data-aos="fade-left" data-aos-offset="250" data-aos-duration="2000"
+		/>
+		<div class="flow" data-aos="fade-right" data-aos-offset="150">
+			<div>
+				<h2 class="caption">About</h2>
+				<p class="heading-2">
+					Front-end engineer based in Brussels, Belgium&nbsp;📍
+				</p>
+			</div>
+			<p>
+				I possess a range of skills in HTML, CSS, JavaScript Frameworks (Vue,
+				React), Tailwind, Git, and more. I have now a few years of experience in
+				designing and working on responsive websites and web applications. My
+				goal is to fulfill your needs efficiently while contributing to a better
+				and more accessible web for all. As a team player, I enjoy
+				collaborating with cross-functional teams to deliver successful digital
+				projects.
+			</p>
+			<a
+				href="https://res.cloudinary.com/drl7fvvng/image/upload/v1701444522/Curriculum%20Vitae/cv-ivan-rodrigues-231201_isz41e.pdf"
+				class="btn mt-lg"
+				target="_blank">Download CV</a
+			>
+		</div>
+	</div>
+</section>

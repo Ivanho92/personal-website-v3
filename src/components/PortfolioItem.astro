@@ -1,0 +1,99 @@
+---
+import { Image } from 'astro:assets';
+import BasePill from '@components/base/BasePill.astro';
+
+interface Props {
+	id: string;
+	class?: string;
+	tags: string[];
+	title: string;
+	image: any;
+	demoLink?: string;
+	codeLink?: string;
+	summary?: string;
+	concepts?: string[];
+}
+
+const {
+	id,
+	class: className,
+	title,
+	image,
+	demoLink,
+	codeLink,
+	tags,
+	summary,
+	concepts,
+} = Astro.props;
+---
+
+<article
+	id={id}
+	class:list={[
+		'[ portfolio-item ] [ box-shadow-md border-radius-lg p-md ]',
+		className,
+	]}
+>
+	<div class="image-scroll-hover">
+		{image && <Image src={image} alt="" class="border-radius-md" />}
+	</div>
+
+	<h3 class="heading-3">{title}</h3>
+
+	<div>
+		{
+			tags.map((tag) => (
+				<BasePill id={tag} class="clr-darkest bg-light">
+					{tag.toUpperCase()}
+				</BasePill>
+			))
+		}
+	</div>
+
+	<div class="[ portfolio-item__description ] flow" style="--flow-spacer: var(--space-sm)">
+		<p>{summary}</p>
+
+		{concepts && 
+			<div>
+				<p><strong>Concepts</strong></p>
+				<ul class="list-reset">{concepts.map((concept) => <li>{concept}</li>)}</ul>
+			</div>
+		}
+
+		<div class="flex-group mt-lg">
+			{demoLink && 
+				<a href={demoLink} class="btn" target="_blank">Live Demo</a>}
+
+			{codeLink && 
+				<a href={codeLink} class="btn-link" target="_blank">Show Code</a>}
+		</div>
+	</div>
+
+</article>
+
+<style lang="scss">
+	@use '@styles/abstracts' as *;
+
+	.portfolio-item {
+		border: 1px solid var(--clr-light-neutral);
+
+		height: fit-content;
+
+		display: grid;
+		grid-auto-rows: max-content;
+		// grid-template-rows: auto auto auto 1fr auto;
+		grid-template-columns: subgrid;
+		gap: 1rem;
+
+		& img {
+			border: 1px solid var(--clr-light-neutral);
+		}
+	}
+
+	.portfolio-item__description {
+		& ul {
+			list-style: disc;
+			padding-inline-start: 1rem;
+		}
+	}
+</style>

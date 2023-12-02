@@ -1,0 +1,18 @@
+.reel {
+  display: grid;
+  gap: 1rem;
+
+  padding-bottom: 2px;
+  
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+
+  scroll-margin: 1rem;
+
+  & > * {
+    scroll-snap-align: start;
+  }
+}
