@@ -1,10 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import TheHero from '@/components/TheHero.astro';
-import TheAbout from '@/components/TheAbout.astro';
-import TheValues from '@/components/TheValues.astro';
-import ThePortfolio from '@/components/ThePortfolio.astro';
-import TheContact from '@/components/TheContact.astro';
+import Layout from '@layouts/Layout.astro';
+
+import TheHero from '@components/TheHero/TheHero.astro';
+import TheAbout from '@components/TheAbout/TheAbout.astro';
+import TheValues from '@components/TheValues/TheValues.astro';
+import ThePortfolio from '@components/ThePortfolio/ThePortfolio.astro';
+import TheContact from '@components/TheContact/TheContact.astro';
 ---
 
 <Layout title="Ivan Rodrigues - Home">
@@ -12,7 +13,6 @@ import TheContact from '@/components/TheContact.astro';
 		<TheHero />
 		<TheAbout />
 		<TheValues />
-		<!-- <ThePortfolio /> -->
 		<ThePortfolio />
 		<TheContact />
 	</main>

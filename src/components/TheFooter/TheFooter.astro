@@ -1,0 +1,24 @@
+---
+// Libraries and Packages
+import Icon from 'astro-icon';
+
+// Styles
+import './TheFooter.scss';
+---
+
+<footer
+	id="footer"
+	class="[ footer ] [ full-width section bg-darkest clr-white ]"
+>
+	<div class="flex-group">
+		<p>Copyright © 2023. All rights are reserved</p>
+		<div class="[ footer__social-links ] [ flex-group ]">
+			<a class="button clr-darkest bg-lightest" href="https://www.linkedin.com/in/ivanrodrigues92/" target="_blank">
+				<Icon name="linkedin" class="svg-icon" />
+			</a>
+			<a class="button clr-darkest bg-lightest" href="https://github.com/Ivanho92" target="_blank">
+					<Icon name="github" class="svg-icon" />
+			</a>
+		</div>
+	</div>
+</footer>

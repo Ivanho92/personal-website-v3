@@ -1,4 +1,5 @@
 ---
+isPublished: true
 title: Sushi Rice Calculator
 tags:
   - 'react'

@@ -14,10 +14,11 @@ const { id, class: className } = Astro.props;
 
 <style>
 	.pill {
+		padding-block: calc(var(--space-sm) / 2);
+		padding-inline: var(--space-sm);
+		font-size: var(--fs-300);
+		border-radius: 3rem;
 		border: none;
-		padding-block: 6px;
-		padding-inline: 18px;
-		border-radius: var(--space-lg);
 
 		/* TODO: portfolio page */
 		/* &:hover {

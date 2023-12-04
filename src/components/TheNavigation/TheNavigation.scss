@@ -1,0 +1,93 @@
+@use '@styles/abstracts' as *;
+
+.nav {
+  & .nav__menu {
+		@media (width <= $breakpoint-small) {
+			position: fixed;
+			background: var(--clr-white);
+			
+			visibility: hidden;
+      
+      opacity: 0;
+			translate: (10%);
+      transition: opacity 200ms ease, translate 300ms ease;
+
+			&[data-state-expanded] {
+        z-index: 99;
+
+				visibility: visible;
+        inset: 0;
+
+        opacity: 1;
+				translate: (0);
+			}
+		}
+
+    & ul {
+			display: flex;
+			align-items: baseline;
+			gap: var(--space-lg);
+
+			@media (width <= $breakpoint-small) {
+				display: grid;
+				justify-items: center;
+				align-content: center;
+				height: 100%;
+			}
+		}
+	}
+
+  & a {
+		font-size: var(--fs-400);
+		text-decoration: none;
+
+		&:is(:hover, :focus):not(.button) {
+			text-decoration: underline;
+      color: var(--clr-primary);
+		}
+
+    @media (width <= $breakpoint-small) {
+      font-size: var(--fs-600);
+    }
+	}
+
+  & .open-nav {
+		display: none;
+
+		cursor: pointer;
+		border: none;
+		background-color: transparent;
+
+		&:is(:hover, :focus) > svg {
+			color: var(--clr-primary);
+		}
+
+		@media (width <= $breakpoint-small) {
+			display: block;
+		}
+	}
+
+  & .close-nav {
+    display: none;
+  
+    position: fixed;
+    top: var(--space-lg);
+    right: var(--space-lg);
+    
+    cursor: pointer;
+  
+    &:is(:hover, :focus) > svg {
+      color: var(--clr-primary);
+    }
+  
+    @media (width <= $breakpoint-small) {
+      display: block;
+    }
+  }
+}
+
+.nav__button-contact.nav__button-contact {
+	--button-padding-inline: var(--space-sm);
+	--button-padding-block: calc(var(--space-sm) / 2);
+	--button-line-height: 1.2;
+}

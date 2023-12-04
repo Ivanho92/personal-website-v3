@@ -1,0 +1,24 @@
+@use '@styles/abstracts' as *;
+
+.portfolio-item {
+	--flow-spacer: var(--space-sm);
+
+	& img {
+		border: 1px solid var(--clr-light-neutral);
+	}
+}
+
+.portfolio-item__description {
+	& ul {
+		list-style: disc;
+		padding-inline-start: 1.3rem;
+	}
+}
+
+.portfolio-item__code-link {
+	@media (width <= $breakpoint-small) {
+		display: block;
+		width: 100%;
+		text-align: center;
+	}
+}

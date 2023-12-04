@@ -1,0 +1,22 @@
+.header {
+  --section-padding: var(--space-md);
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  --logo-size: 3rem;
+  
+	cursor: pointer;
+  width: var(--logo-size);
+  height: var(--logo-size);
+
+  &:hover {
+    filter: brightness(.9);
+  }
+}
