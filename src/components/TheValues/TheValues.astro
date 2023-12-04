@@ -1,27 +1,28 @@
 ---
+// Libraries and Packages
 import Icon from 'astro-icon';
 
+// Styles
 import './TheValues.scss';
 ---
-
-<section class="[ values ] [ full-width section bg-lightest ]">
+<section class="full-width section bg-lightest">
 	<h2 class="visually-hidden">Values</h2>
-	<div class="[ values__container ] [ flex-group ]">
-		<div class="[ value__item ] [ flow ]" data-aos="fade-right" >
+	<div class="[ values ] [ even-columns ]">
+		<div class="[ value ] [ flow ]" data-aos="fade-right" >
 			<Icon name='heart' class="[ value__icon ] [ bg-light round ]" />
 			<div>
 				<p class="heading-4">Passionate</p>
 				<p>Vue, React, CSS, Design</p>
 			</div>
 		</div>
-		<div class="[ value__item ] [ flow ]"  data-aos="fade-up" data-aos-offset="150" data-aos-delay="100" >
+		<div class="[ value ] [ flow ]"  data-aos="fade-up" data-aos-offset="150" data-aos-delay="100" >
 			<Icon name='book' class="[ value__icon ] [ bg-light round ]" />
 			<div>
 				<p class="heading-4">Self Taught</p>
 				<p>Web Development</p>
 			</div>
 		</div>
-		<div class="[ value__item ] [ flow ]"  data-aos="fade-left" data-aos-offset="175" data-aos-delay="200" >
+		<div class="[ value ] [ flow ]"  data-aos="fade-left" data-aos-offset="175" data-aos-delay="200" >
 			<Icon name='atom' class="[ value__icon ] [ bg-light round ]" />
 			<div>
 				<p class="heading-4">Tech Enthusiast</p>

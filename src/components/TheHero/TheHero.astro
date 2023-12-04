@@ -1,21 +1,22 @@
 ---
+// Libraries and Packages
 import { Image } from 'astro:assets';
+
+// Internal Components and Assets
 import profilePicture from '@images/profile-picture2.png';
 
+// Styles
 import './TheHero.scss';
 ---
-
 <section id="home" class="[ hero ] [ full-width bg-light ]" data-aos="fade-in">
 	<div class="even-columns">
 		<div class="[ hero__intro ] [ flow ]" data-aos="fade-in">
-			<h1 class="ff-base fw-regular letter-spacing-base flow" style="--flow-spacer: var(--space-xs)">
+			<h1 class="flow ff-base fw-regular letter-spacing-base" style="--flow-spacer: var(--space-xs)">
 				<span class="clr-dark fw-base fs-500">Hello👋, I'm</span>
 				<span class="heading-title">Ivan Rodrigues</span>
 				<span class="clr-dark fw-base fs-400">Frontend Engineer</span>
 			</h1>
-			<a href="#portfolio" class="btn">
-				Open Portfolio
-			</a>
+			<a href="#portfolio" class="button">Open Portfolio</a>
 			<ul class="[ hero__social-links ] [ flex-group list-reset fs-300 ]">
 				<a href="https://www.linkedin.com/in/ivanrodrigues92/" target="_blank">Linkedin</a>
 				<a href="https://github.com/Ivanho92" target="_blank">Github</a>

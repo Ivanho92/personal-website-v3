@@ -1,17 +1,19 @@
 ---
+// Libraries and Packages
 import { Image } from 'astro:assets';
+
+// Internal Components and Assets
 import aboutImage from '@images/frontend-dev-working-4-tinted-removebg-preview-cropped.png';
 
+// Styles
 import './TheAbout.scss';
 ---
-
 <section id="about" class="[ about ] [ section ]">
 	<div class="[ about__container ] [ even-columns ]">
 		<Image
+			class="[ image-background ] [ inline-center ]"
 			src={aboutImage}
 			alt=""
-			class="image-center image-background"
-			style="--grayscale: 0; --opacity: 0.05;"
 			data-aos="fade-left" data-aos-offset="250" data-aos-duration="2000"
 		/>
 		<div class="flow" data-aos="fade-right" data-aos-offset="150">
@@ -31,8 +33,8 @@ import './TheAbout.scss';
 				projects.
 			</p>
 			<a
-				href="https://res.cloudinary.com/drl7fvvng/image/upload/v1701444522/Curriculum%20Vitae/cv-ivan-rodrigues-231201_isz41e.pdf"
-				class="btn mt-lg"
+				href="/cv-ivan-rodrigues.pdf"
+				class="button mt-lg"
 				target="_blank">Download CV</a
 			>
 		</div>

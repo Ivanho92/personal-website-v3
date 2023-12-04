@@ -1,31 +1,10 @@
 @use '@styles/abstracts' as *;
 
-.image-background {
-	@media (width <= $breakpoint-medium) and (width >= $breakpoint-small) {
-		position: absolute;
-		z-index: -1;
-
-		bottom: 0;
-		top: 0;
-    margin-block: auto;
-		right: var(--offset-right, 0);
-
-		filter: 
-      brightness(var(--brightness, 1)) 
-      opacity(var(--opacity, 0.1))
-			blur(var(--blur, 1px))
-      grayscale(var(--grayscale, 0.4));
-
-		width: fit-content;
-	}
-}
-
 .image-scroll-hover {
 	--scroll-duration: 7s;
 
 	position: relative;
 	
-	// height: 300px;
 	aspect-ratio: 16 / 9;
 	overflow-y: hidden;
 	

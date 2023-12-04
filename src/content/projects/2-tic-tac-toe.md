@@ -1,4 +1,5 @@
 ---
+isPublished: true
 title: Tic-Tac-Toe
 tags: 
   - 'javascript'

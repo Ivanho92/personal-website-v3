@@ -1,10 +1,9 @@
 .flex-group {
   display: flex;
   flex-wrap: wrap;
-  // width: fit-content;
   
-  column-gap: var(--flex-gap, var(--flex-column-gap, 1em));
-  row-gap: var(--flex-gap, var(--flex-row-gap, .5em));
+  column-gap: var(--flex-column-gap, var(--flex-gap, 1em));
+  row-gap: var(--flex-row-gap, var(--flex-gap, .5em));
 
   align-items: var(--flex-align, baseline);
   justify-content: var(--flex-justify, normal);
