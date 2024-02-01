@@ -90,6 +90,11 @@ a:focus {
   // outline-offset: 0.25rem;
 }
 
+img,
+picture {
+  height: auto;
+}
+
 @media (width <= $breakpoint-phone) {
   h1 {
     font-size: var(--fs-800);

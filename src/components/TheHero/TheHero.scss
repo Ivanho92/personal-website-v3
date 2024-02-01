@@ -53,6 +53,7 @@
 
   height: 100%;
   filter: drop-shadow(var(--filter-drop-shadow));
+  object-fit: cover;
 
   @media (width <= $breakpoint-medium) {
     max-height: 95%;
@@ -76,6 +77,7 @@
     bottom: 0;
 
     width: fit-content;
+    overflow-x: visible;
   }
 }
 

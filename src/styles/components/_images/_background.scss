@@ -1,7 +1,7 @@
 @use "@styles/abstracts" as *;
 
 .image-background {
-  @media (width <= $breakpoint-medium) and (width >= $breakpoint-small) {
+  @media ($breakpoint-small <= width <= $breakpoint-medium) {
     position: absolute;
     z-index: -1;
 
