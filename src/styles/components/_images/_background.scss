@@ -1,20 +1,18 @@
-@use '@styles/abstracts' as *;
+@use "@styles/abstracts" as *;
 
 .image-background {
-	@media (width <= $breakpoint-medium) and (width >= $breakpoint-small) {
-		position: absolute;
-		z-index: -1;
+  @media (width <= $breakpoint-medium) and (width >= $breakpoint-small) {
+    position: absolute;
+    z-index: -1;
 
-		width: fit-content;
-		bottom: 0;
-		top: 0;
+    width: fit-content;
+    bottom: 0;
+    top: 0;
     margin-block: auto;
-		right: var(--offset-right, 0);
+    right: var(--offset-right, 0);
 
-		filter: 
-      brightness(var(--filter-brightness, 1)) 
-      opacity(var(--filter-opacity, 0.1))
-			blur(var(--filter-blur, 1px))
+    filter: brightness(var(--filter-brightness, 1))
+      opacity(var(--filter-opacity, 0.1)) blur(var(--filter-blur, 1px))
       grayscale(var(--filter-grayscale, 0.4));
-	}
+  }
 }

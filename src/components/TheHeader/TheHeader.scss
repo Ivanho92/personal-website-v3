@@ -11,12 +11,12 @@
 
 .header__logo {
   --logo-size: 3rem;
-  
-	cursor: pointer;
+
+  cursor: pointer;
   width: var(--logo-size);
   height: var(--logo-size);
 
   &:hover {
-    filter: brightness(.9);
+    filter: brightness(0.9);
   }
 }

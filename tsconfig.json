@@ -9,10 +9,7 @@
       "@styles/*": ["src/styles/*"],
       "@images/*": ["src/images/*"],
       "@icons/*": ["src/icons/*"],
-    }
+    },
   },
-  "exclude": [
-    "references",
-    "src/components/old",
-  ]
+  "exclude": ["references", "src/components/old"],
 }

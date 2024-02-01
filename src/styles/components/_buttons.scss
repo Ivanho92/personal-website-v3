@@ -12,15 +12,15 @@
   padding-block: var(--button-padding-block, 1em);
   padding-inline: var(--button-padding-inline, 1em);
   border-radius: var(--button-border-radius, 0);
-  
-	color: var(--clr-white);
-	background-color: var(--clr-primary);
-  
-	display: inline-block;
-	border: none;
-	text-align: center;
-	text-decoration: none;
-  
+
+  color: var(--clr-white);
+  background-color: var(--clr-primary);
+
+  display: inline-block;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+
   cursor: pointer;
   transition: all 150ms ease-in;
 }
@@ -32,7 +32,6 @@
     text-align: center;
   }
 }
-
 
 .button[data-size="small"] {
   --button-padding-inline: var(--space-sm);
@@ -51,12 +50,13 @@
   border: 2px solid var(--clr-primary);
 }
 
-.button[data-variant="secondary"]:is(:hover,:focus) {
+.button[data-variant="secondary"]:is(:hover, :focus) {
   color: var(--clr-white);
   background-color: var(--clr-primary);
 }
 
-.button:disabled, .button[data-variant="disabled"] {
+.button:disabled,
+.button[data-variant="disabled"] {
   pointer-events: none;
   color: var(--clr-medium-neutral);
   background-color: var(--clr-lightest-neutral);

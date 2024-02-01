@@ -1,6 +1,7 @@
 @use "@styles/abstracts" as *;
 
-body, html {
+body,
+html {
   margin: 0;
   overflow-x: hidden;
 }
@@ -9,12 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 
-
 :target {
   // scroll offset reset
-  scroll-margin-block: -5ex; 
+  scroll-margin-block: -5ex;
 }
-
 
 body {
   font-family: var(--ff-base);
@@ -80,7 +79,8 @@ a {
   text-underline-offset: 4px;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: none;
   color: var(--clr-darkest);
 }
@@ -94,15 +94,15 @@ a:hover, a:focus {
   h1 {
     font-size: var(--fs-800);
   }
-  
+
   h2 {
     font-size: var(--fs-700);
   }
-  
+
   h3 {
     font-size: var(--fs-600);
   }
-  
+
   h4 {
     font-size: var(--fs-500);
   }
