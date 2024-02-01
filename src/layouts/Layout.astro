@@ -1,49 +1,62 @@
 ---
 // Internal Components and Assets
-import TheFooter from '@components/TheFooter/TheFooter.astro';
-import TheHeader from '@components/TheHeader/TheHeader.astro';
+import TheFooter from "@components/TheFooter/TheFooter.astro";
+import TheHeader from "@components/TheHeader/TheHeader.astro";
 
 // Styles
-import '@styles/main.scss';
+import "@styles/main.scss";
 
 // Javascript
 interface Props {
-	title: string;
+    title: string;
 }
 
-const { title } = Astro.props;
+const {title} = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Ivan Rodrigues Personal Website" />
-		<meta name="viewport" content="width=device-width" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="Ivan Rodrigues Personal Website" />
+        <meta name="viewport" content="width=device-width" />
 
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/favicon-16x16.png"
+        />
 
-		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-	</head>
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
 
-	<body>
-		<TheHeader />
-		<slot />
-		<TheFooter />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
 
-		<script is:inline src="https://unpkg.com/aos@next/dist/aos.js" />
-		<script is:inline src="https://unpkg.com/tabbable/dist/index.umd.js"></script>
-		<script is:inline src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
+    <body>
+        <TheHeader />
+        <slot />
+        <TheFooter />
 
-		<script is:inline>
-			AOS.init({
-				once: true,
-				duration: 750,
-			});
-		</script>
-	</body>
+        <script is:inline src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script is:inline src="https://unpkg.com/tabbable/dist/index.umd.js"
+        ></script>
+        <script
+            is:inline
+            src="https://unpkg.com/focus-trap/dist/focus-trap.umd.js"></script>
+
+        <script is:inline>
+            AOS.init({
+                once: true,
+                duration: 750,
+            });
+        </script>
+    </body>
 </html>

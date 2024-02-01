@@ -1,17 +1,17 @@
 @use "@styles/abstracts" as *;
 
 .portfolio__items {
-  --masonry-gap: var(--space-md);
+    --masonry-gap: var(--space-md);
 
-  column-count: 2;
-  column-gap: var(--masonry-gap);
+    column-count: 2;
+    column-gap: var(--masonry-gap);
 
-  > *:not(:last-child) {
-    break-inside: avoid;
-    margin-bottom: var(--masonry-gap);
-  }
+    > *:not(:last-child) {
+        break-inside: avoid;
+        margin-bottom: var(--masonry-gap);
+    }
 
-  @media (width <= $breakpoint-small) {
-    column-count: 1;
-  }
+    @media (width <= $breakpoint-small) {
+        column-count: 1;
+    }
 }

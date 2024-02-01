@@ -1,22 +1,25 @@
 @use "@styles/abstracts" as *;
 
 .values {
-  grid-auto-columns: auto;
-  justify-content: center;
-  gap: var(--space-xxl);
+    grid-auto-columns: auto;
+    justify-content: center;
+    gap: var(--space-xxl);
 }
 
 .value {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .value__icon {
-  width: 94px;
-  padding: 1em;
+    width: 94px;
+    height: auto;
+    padding: 1em;
 
-  fill: none;
-  stroke: var(--clr-primary);
+    * {
+        stroke: var(--clr-primary);
+        fill: none;
+    }
 }

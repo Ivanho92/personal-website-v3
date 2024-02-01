@@ -1,33 +1,44 @@
 ---
 // Libraries and Packages
-import Icon from 'astro-icon';
+import {Icon} from "astro-icon/components";
 
 // Styles
-import './TheValues.scss';
+import "./TheValues.scss";
 ---
+
 <section class="full-width section bg-lightest">
-	<h2 class="visually-hidden">Values</h2>
-	<div class="[ values ] [ even-columns ]">
-		<div class="[ value ] [ flow ]" data-aos="fade-right" >
-			<Icon name='heart' class="[ value__icon ] [ bg-light round ]" />
-			<div>
-				<p class="heading-4">Passionate</p>
-				<p>Vue, React, CSS, Design</p>
-			</div>
-		</div>
-		<div class="[ value ] [ flow ]"  data-aos="fade-up" data-aos-offset="150" data-aos-delay="100" >
-			<Icon name='book' class="[ value__icon ] [ bg-light round ]" />
-			<div>
-				<p class="heading-4">Self Taught</p>
-				<p>Web Development</p>
-			</div>
-		</div>
-		<div class="[ value ] [ flow ]"  data-aos="fade-left" data-aos-offset="175" data-aos-delay="200" >
-			<Icon name='atom' class="[ value__icon ] [ bg-light round ]" />
-			<div>
-				<p class="heading-4">Tech Enthusiast</p>
-				<p>AI, Machine Learning</p>
-			</div>
-		</div>
-	</div>
+    <h2 class="visually-hidden">Values</h2>
+    <div class="[ values ] [ even-columns ]">
+        <div class="[ value ] [ flow ]" data-aos="fade-right">
+            <Icon name="heart" class="[ value__icon ] [ bg-light round ]" />
+            <div>
+                <p class="heading-4">Passionate</p>
+                <p>Vue, React, CSS, Design</p>
+            </div>
+        </div>
+        <div
+            class="[ value ] [ flow ]"
+            data-aos="fade-up"
+            data-aos-offset="150"
+            data-aos-delay="100"
+        >
+            <Icon name="book" class="[ value__icon ] [ bg-light round ]" />
+            <div>
+                <p class="heading-4">Self Taught</p>
+                <p>Web Development</p>
+            </div>
+        </div>
+        <div
+            class="[ value ] [ flow ]"
+            data-aos="fade-left"
+            data-aos-offset="175"
+            data-aos-delay="200"
+        >
+            <Icon name="atom" class="[ value__icon ] [ bg-light round ]" />
+            <div>
+                <p class="heading-4">Tech Enthusiast</p>
+                <p>AI, Machine Learning</p>
+            </div>
+        </div>
+    </div>
 </section>

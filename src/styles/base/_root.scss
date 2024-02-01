@@ -1,68 +1,68 @@
 @use "@styles/abstracts" as *;
 
 :root {
-  --clr-primary: hsl(185 89% 28%);
-  --clr-primary-shade: hsl(185, 89%, 24%);
-  --clr-darkest: hsl(185, 7%, 24%);
-  --clr-dark: hsl(185, 5%, 44%);
-  --clr-medium: hsl(185, 24%, 49%);
-  --clr-light: hsl(185, 51%, 92%);
-  --clr-lightest: hsl(185, 33%, 97%);
-  --clr-darkest-neutral: hsl(185, 0%, 24%);
-  --clr-dark-neutral: hsl(185, 0%, 44%);
-  --clr-medium-neutral: hsl(185, 0%, 49%);
-  --clr-light-neutral: hsl(185, 0%, 92%);
-  --clr-lightest-neutral: hsl(185, 0%, 97%);
-  --clr-black: #000000;
-  --clr-white: #ffffff;
-  --clr-transparent: transparent;
+    --clr-primary: hsl(185 89% 28%);
+    --clr-primary-shade: hsl(185, 89%, 24%);
+    --clr-darkest: hsl(185, 7%, 24%);
+    --clr-dark: hsl(185, 5%, 44%);
+    --clr-medium: hsl(185, 24%, 49%);
+    --clr-light: hsl(185, 51%, 92%);
+    --clr-lightest: hsl(185, 33%, 97%);
+    --clr-darkest-neutral: hsl(185, 0%, 24%);
+    --clr-dark-neutral: hsl(185, 0%, 44%);
+    --clr-medium-neutral: hsl(185, 0%, 49%);
+    --clr-light-neutral: hsl(185, 0%, 92%);
+    --clr-lightest-neutral: hsl(185, 0%, 97%);
+    --clr-black: #000000;
+    --clr-white: #ffffff;
+    --clr-transparent: transparent;
 
-  --space-0: 0px;
-  --space-px: 1px;
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 48px;
-  --space-xxl: 80px;
+    --space-0: 0px;
+    --space-px: 1px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 80px;
 
-  --fs-300: 14px;
-  --fs-400: 18px;
-  --fs-500: 22px;
-  --fs-600: 28px;
-  --fs-700: 35px;
-  --fs-800: 44px;
-  --fs-900: 55px;
-  --fs-base: var(--fs-400);
-  --fs-title: var(--fs-900);
+    --fs-300: 14px;
+    --fs-400: 18px;
+    --fs-500: 22px;
+    --fs-600: 28px;
+    --fs-700: 35px;
+    --fs-800: 44px;
+    --fs-900: 55px;
+    --fs-base: var(--fs-400);
+    --fs-title: var(--fs-900);
 
-  --fw-regular: 400;
-  --fw-bold: 700;
+    --fw-regular: 400;
+    --fw-bold: 700;
 
-  --ff-base: Roboto, "Helvetica Neue", Arial, sans-serif;
-  --ff-heading: var(--ff-base);
-  // --ff-heading: "Eczar", Times New Roman, serif;
+    --ff-base: Roboto, "Helvetica Neue", Arial, sans-serif;
+    --ff-heading: var(--ff-base);
+    // --ff-heading: "Eczar", Times New Roman, serif;
 
-  --measure-base: 70ch;
-  --measure-compact: 24ch;
+    --measure-base: 70ch;
+    --measure-compact: 24ch;
 
-  --letter-spacing-base: 0em;
-  --letter-spacing-compact: -1.1px;
+    --letter-spacing-base: 0em;
+    --letter-spacing-compact: -1.1px;
 
-  --line-height-none: 1;
-  --line-height-auto: auto;
-  --line-height-heading: 1.1;
-  --line-height-base: 1.7;
+    --line-height-none: 1;
+    --line-height-auto: auto;
+    --line-height-heading: 1.1;
+    --line-height-base: 1.7;
 
-  --breakpoint-small: $breakpoint-small;
-  --breakpoint-medium: $breakpoint-medium;
-  --breakpoint-large: $breakpoint-large;
+    --breakpoint-small: $breakpoint-small;
+    --breakpoint-medium: $breakpoint-medium;
+    --breakpoint-large: $breakpoint-large;
 
-  --breakpoint-phone: $breakpoint-phone;
-  --breakpoint-tablet: $breakpoint-tablet;
-  --breakpoint-desktop: $breakpoint-desktop;
+    --breakpoint-phone: $breakpoint-phone;
+    --breakpoint-tablet: $breakpoint-tablet;
+    --breakpoint-desktop: $breakpoint-desktop;
 
-  /*************************/
-  --image-bg-filter: brightness(1) opacity(0.1) blur(1px) grayscale(0.4);
-  --gutter: var(--space-md, 2rem);
+    /*************************/
+    --image-bg-filter: brightness(1) opacity(0.1) blur(1px) grayscale(0.4);
+    --gutter: var(--space-md, 2rem);
 }

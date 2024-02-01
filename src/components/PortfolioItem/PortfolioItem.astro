@@ -1,94 +1,103 @@
 ---
 // Libraries and Packages
-import { Image } from 'astro:assets';
+import {Image} from "astro:assets";
 
 // Internal Components and Assets
-import BasePill from '@components/base/BasePill.astro';
+import BasePill from "@components/base/BasePill.astro";
 
 // Styles
-import './PortfolioItem.scss';
+import "./PortfolioItem.scss";
 
 // Javascript
 interface Props {
-	id: string;
-	class?: string;
-	tags: string[];
-	title: string;
-	image: any;
-	demoLink?: string;
-	codeLink?: string;
-	summary?: string;
-	concepts?: string[];
+    id: string;
+    class?: string;
+    tags: string[];
+    title: string;
+    image: any;
+    demoLink?: string;
+    codeLink?: string;
+    summary?: string;
+    concepts?: string[];
 }
 
 const {
-	id,
-	class: className,
-	title,
-	image,
-	demoLink,
-	codeLink,
-	tags,
-	summary,
-	concepts,
+    id,
+    class: className,
+    title,
+    image,
+    demoLink,
+    codeLink,
+    tags,
+    summary,
+    concepts,
 } = Astro.props;
 ---
 
-<article id={id} class:list={['[ portfolio-item ] [ card flow ]', className]}>
-	{
-		image && (
-			<div class="image-scroll-hover">
-				<Image src={image} alt="" class="border-radius-md" />
-			</div>
-		)
-	}
+<article id={id} class:list={["[ portfolio-item ] [ card flow ]", className]}>
+    {
+        image && (
+            <div class="image-scroll-hover">
+                <Image
+                    src={image}
+                    alt=""
+                    class="border-radius-md"
+                    format="png"
+                />
+            </div>
+        )
+    }
 
-	<h3 class="heading-3">{title}</h3>
+    <h3 class="heading-3">{title}</h3>
 
-	<div class="flex-group" style="--flex-gap: var(--space-xs)">
-		{
-			tags.map((tag) => (
-				<BasePill id={tag} class="clr-darkest bg-light">
-					{tag.toUpperCase()}
-				</BasePill>
-			))
-		}
-	</div>
+    <div class="flex-group" style="--flex-gap: var(--space-xs)">
+        {
+            tags.map(tag => (
+                <BasePill id={tag} class="clr-darkest bg-light">
+                    {tag.toUpperCase()}
+                </BasePill>
+            ))
+        }
+    </div>
 
-	<div class="[ portfolio-item__description ] [ flow ]">
-		<p>{summary}</p>
+    <div class="[ portfolio-item__description ] [ flow ]">
+        <p>{summary}</p>
 
-		{
-			concepts && (
-				<div>
-					<p>
-						<strong>Concepts</strong>
-					</p>
-					<ul>
-						{concepts.map((concept) => (
-							<li>{concept}</li>
-						))}
-					</ul>
-				</div>
-			)
-		}
+        {
+            concepts && (
+                <div>
+                    <p>
+                        <strong>Concepts</strong>
+                    </p>
+                    <ul>
+                        {concepts.map(concept => (
+                            <li>{concept}</li>
+                        ))}
+                    </ul>
+                </div>
+            )
+        }
 
-		<div class="flex-group mt-lg">
-			{
-				demoLink && (
-					<a href={demoLink} class="button" target="_blank">
-						Live Demo
-					</a>
-				)
-			}
+        <div class="flex-group mt-lg">
+            {
+                demoLink && (
+                    <a href={demoLink} class="button" target="_blank">
+                        Live Demo
+                    </a>
+                )
+            }
 
-			{
-				codeLink && (
-					<a href={codeLink} class="portfolio-item__code-link" target="_blank">
-						Show Code
-					</a>
-				)
-			}
-		</div>
-	</div>
+            {
+                codeLink && (
+                    <a
+                        href={codeLink}
+                        class="portfolio-item__code-link"
+                        target="_blank"
+                    >
+                        Show Code
+                    </a>
+                )
+            }
+        </div>
+    </div>
 </article>

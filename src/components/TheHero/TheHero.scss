@@ -1,114 +1,115 @@
 @use "@styles/abstracts" as *;
 
 .hero {
-  z-index: 1;
-  position: relative;
-  overflow: hidden;
-
-  & > div:first-child {
     z-index: 1;
-    column-gap: 0;
-    padding-block-start: var(--space-md);
-  }
+    position: relative;
+    overflow: hidden;
 
-  @media (width <= $breakpoint-medium) {
-    padding-block: var(--space-xxl);
-  }
+    & > div:first-child {
+        z-index: 1;
+        column-gap: 0;
+        padding-block-start: var(--space-md);
+    }
+
+    @media (width <= $breakpoint-medium) {
+        padding-block: var(--space-xxl);
+    }
 }
 
 .hero__intro {
-  align-self: center;
-  margin-top: -100px;
+    align-self: center;
+    margin-top: -100px;
 
-  & > h1 > * {
-    display: block;
-  }
+    & > h1 > * {
+        display: block;
+    }
 
-  @media (width <= $breakpoint-medium) {
-    align-self: auto;
-    margin-top: auto;
-  }
+    @media (width <= $breakpoint-medium) {
+        align-self: auto;
+        margin-top: auto;
+    }
 }
 
 .hero__social-links {
-  justify-content: center;
+    justify-content: center;
 
-  > * {
-    overflow: hidden;
-  }
+    > * {
+        overflow: hidden;
+    }
 
-  @media (width > $breakpoint-small) {
-    bottom: var(--space-md);
-    position: absolute;
-    justify-content: start;
-  }
+    @media (width > $breakpoint-small) {
+        bottom: var(--space-md);
+        position: absolute;
+        justify-content: start;
+    }
 }
 
 .hero__profile-picture {
-  --filter-drop-shadow: 5px 1px 26px rgba(0 0 0 / 0.3);
-  --filter-brightness: 1;
-  --filter-opacity: 1;
-  --filter-blur: 0px;
-  --filter-grayscale: 0;
+    --filter-drop-shadow: 5px 1px 26px rgba(0 0 0 / 0.3);
+    --filter-brightness: 1;
+    --filter-opacity: 1;
+    --filter-blur: 0px;
+    --filter-grayscale: 0;
 
-  height: 100%;
-  filter: drop-shadow(var(--filter-drop-shadow));
-  object-fit: cover;
+    height: 100%;
+    filter: drop-shadow(var(--filter-drop-shadow));
+    object-fit: cover;
 
-  @media (width <= $breakpoint-medium) {
-    max-height: 95%;
+    @media (width <= $breakpoint-medium) {
+        max-height: 95%;
 
-    top: auto;
-    right: var(--gutter);
+        top: auto;
+        right: var(--gutter);
 
-    filter: brightness(var(--filter-brightness)) opacity(var(--filter-opacity))
-      blur(var(--filter-blur)) grayscale(var(--filter-grayscale))
-      drop-shadow(var(--filter-drop-shadow));
-  }
+        filter: brightness(var(--filter-brightness))
+            opacity(var(--filter-opacity)) blur(var(--filter-blur))
+            grayscale(var(--filter-grayscale))
+            drop-shadow(var(--filter-drop-shadow));
+    }
 
-  @media (width <= $breakpoint-small) {
-    --filter-opacity: 0.1;
-    --filter-blur: 1px;
-    --filter-grayscale: 0.4;
+    @media (width <= $breakpoint-small) {
+        --filter-opacity: 0.1;
+        --filter-blur: 1px;
+        --filter-grayscale: 0.4;
 
-    z-index: -1;
-    position: absolute;
-    right: -100px;
-    bottom: 0;
+        z-index: -1;
+        position: absolute;
+        right: -100px;
+        bottom: 0;
 
-    width: fit-content;
-    overflow-x: visible;
-  }
+        width: fit-content;
+        overflow-x: visible;
+    }
 }
 
 .hero__shape {
-  position: absolute;
-  right: 0;
-  width: 45%;
-  height: 100%;
-
-  &::before {
-    content: "";
     position: absolute;
-    width: 999%;
+    right: 0;
+    width: 45%;
     height: 100%;
-    background: linear-gradient(
-      180deg,
-      var(--clr-medium) 0%,
-      var(--clr-primary) 100%
-    );
-    transform: skewX(15deg);
-  }
 
-  @media (width <= $breakpoint-medium) {
     &::before {
-      left: 100px;
+        content: "";
+        position: absolute;
+        width: 999%;
+        height: 100%;
+        background: linear-gradient(
+            180deg,
+            var(--clr-medium) 0%,
+            var(--clr-primary) 100%
+        );
+        transform: skewX(15deg);
     }
-  }
 
-  @media (width <= $breakpoint-small) {
-    &::before {
-      display: none;
+    @media (width <= $breakpoint-medium) {
+        &::before {
+            left: 100px;
+        }
     }
-  }
+
+    @media (width <= $breakpoint-small) {
+        &::before {
+            display: none;
+        }
+    }
 }

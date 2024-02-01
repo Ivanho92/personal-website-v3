@@ -1,20 +1,20 @@
 @use "@styles/abstracts" as *;
 
 .contact__info {
-  display: grid;
-  grid-column-gap: var(--space-xxl);
-  grid-row-gap: var(--space-lg);
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-  grid-template-rows: auto 1fr;
-
-  > * {
-    grid-row: span 2;
     display: grid;
-    grid-template-rows: subgrid;
-    grid-row-gap: var(--space-xs);
-  }
+    grid-column-gap: var(--space-xxl);
+    grid-row-gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    grid-template-rows: auto 1fr;
 
-  & svg {
-    align-self: end;
-  }
+    > * {
+        grid-row: span 2;
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row-gap: var(--space-xs);
+    }
+
+    & svg {
+        align-self: end;
+    }
 }

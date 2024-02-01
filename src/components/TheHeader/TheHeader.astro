@@ -1,20 +1,26 @@
 ---
 // Libraries and Packages
-import { Image } from 'astro:assets';
+import {Image} from "astro:assets";
 
 // Internal Components and Assets
-import logo from '@images/logo.png';
-import TheNavigation from '@components/TheNavigation/TheNavigation.astro';
+import logo from "@images/logo.png";
+import TheNavigation from "@components/TheNavigation/TheNavigation.astro";
 
 // Styles
-import './TheHeader.scss';
+import "./TheHeader.scss";
 ---
 
 <header class="[ header ] [ full-width section bg-white ]">
-	<div class="header__container">
-		<a href="#">
-			<Image src={logo} alt="" class="header__logo" data-aos="fade-down-left" />
-		</a>
-		<TheNavigation />
-	</div>
+    <div class="header__container">
+        <a href="#">
+            <Image
+                src={logo}
+                alt=""
+                class="header__logo"
+                data-aos="fade-down-left"
+                format="png"
+            />
+        </a>
+        <TheNavigation />
+    </div>
 </header>

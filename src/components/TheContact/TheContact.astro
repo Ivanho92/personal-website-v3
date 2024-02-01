@@ -1,52 +1,54 @@
 ---
 // Libraries and Packages
-import { Image } from 'astro:assets';
-import { Icon } from 'astro-icon';
+import {Image} from "astro:assets";
+import {Icon} from "astro-icon/components";
 
 // Internal Components and Assets
-import contactImage from '@images/handshake-1-tinted-removebg-preview-cropped.png';
+import contactImage from "@images/handshake-1-tinted-removebg-preview-cropped.png";
 
 // Styles
-import './TheContact.scss';
+import "./TheContact.scss";
 ---
 
 <section id="contact" class="full-width section bg-lightest">
-	<div class="even-columns">
-		<div class="flow" style="--flow-spacer: var(--space-lg)">
-			<div data-aos="fade-up">
-				<h2 class="caption">Contact</h2>
-				<p class="heading-2">Interested in chatting?&nbsp;👇</p>
-			</div>
-			<div
-				class="contact__info"
-				data-aos="fade-up-right"
-				data-aos-delay="100"
-			>
-				<div>
-					<Icon name="mail" width="32" />
-					<div>
-						<h3 class="fs-500 clr-dark">Mail</h3>
-						<a href="mailto:ivan.joel.rodrigues@gmail.com" class="clr-primary"
-							>ivan.joel.rodrigues@gmail.com</a
-						>
-					</div>
-				</div>
-				<div>
-					<Icon name="location" width="32" />
-					<div>
-						<h3 class="fs-500 clr-dark">Location</h3>
-						<p>Brussels, Belgium</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<Image
-			src={contactImage}
-			alt=""
-			class="inline-center"
-			data-aos="fade-left"
-			data-aos-offset="350"
-			data-aos-duration="1500"
-		/>
-	</div>
+    <div class="even-columns">
+        <div class="flow" style="--flow-spacer: var(--space-lg)">
+            <div data-aos="fade-up">
+                <h2 class="caption">Contact</h2>
+                <p class="heading-2">Interested in chatting?&nbsp;👇</p>
+            </div>
+            <div
+                class="contact__info"
+                data-aos="fade-up-right"
+                data-aos-delay="100"
+            >
+                <div>
+                    <Icon name="mail" width={32} />
+                    <div>
+                        <h3 class="fs-500 clr-dark">Mail</h3>
+                        <a
+                            href="mailto:ivan.joel.rodrigues@gmail.com"
+                            class="clr-primary">ivan.joel.rodrigues@gmail.com</a
+                        >
+                    </div>
+                </div>
+                <div>
+                    <Icon name="location" width={32} />
+                    <div>
+                        <h3 class="fs-500 clr-dark">Location</h3>
+                        <p>Brussels, Belgium</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <Image
+            src={contactImage}
+            alt=""
+            class="inline-center"
+            format="png"
+            data-aos="fade-left"
+            data-aos-offset="350"
+            data-aos-duration="1500"
+        />
+    </div>
 </section>

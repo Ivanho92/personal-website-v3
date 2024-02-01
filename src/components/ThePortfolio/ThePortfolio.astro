@@ -1,60 +1,60 @@
 ---
 // Libraries and Packages
-import { getCollection } from 'astro:content';
+import {getCollection} from "astro:content";
 
 // Internal Components and Assets
-import PortfolioItem from '@components/PortfolioItem/PortfolioItem.astro';
+import PortfolioItem from "@components/PortfolioItem/PortfolioItem.astro";
 
 // Styles
-import './ThePortfolio.scss';
+import "./ThePortfolio.scss";
 
 // Javascript
-const projects = await getCollection('projects');
+const projects = await getCollection("projects");
 ---
 
 <section
-	id="portfolio"
-	class="section flow"
-	style="--flow-spacer: var(--space-lg)"
+    id="portfolio"
+    class="section flow"
+    style="--flow-spacer: var(--space-lg)"
 >
-	<div
-		class="flex-group"
-		style="
+    <div
+        class="flex-group"
+        style="
 			--flex-align: end; 
 			--flex-justify: space-between;"
-	>
-		<div data-aos="fade-right" data-aos-offset="200">
-			<h2 class="caption">Portfolio</h2>
-			<p class="heading-2 fs-700">Recent projects&nbsp;👀</p>
-		</div>
+    >
+        <div data-aos="fade-right" data-aos-offset="200">
+            <h2 class="caption">Portfolio</h2>
+            <p class="heading-2 fs-700">Recent projects&nbsp;👀</p>
+        </div>
 
-		<!-- TODO: portfolio page -->
-		<!-- <a href="#" class="button" style="--button-responsive-width: auto">Open Portfolio</a> -->
-	</div>
+        <!-- TODO: portfolio page -->
+        <!-- <a href="#" class="button" style="--button-responsive-width: auto">Open Portfolio</a> -->
+    </div>
 
-	<div
-		class="portfolio__items"
-		data-aos="fade-left"
-		data-aos-delay="300"
-		data-aos-duration="1500"
-		data-aos-offset="150"
-	>
-		{
-			projects.map(
-				(proj) =>
-					proj.data.isPublished && (
-						<PortfolioItem
-							id={proj.id}
-							title={proj.data.title}
-							tags={proj.data.tags}
-							image={proj.data.image}
-							demoLink={proj.data['live-url']}
-							codeLink={proj.data['code-url']}
-							summary={proj.data.summary}
-							concepts={proj.data.concepts}
-						/>
-					)
-			)
-		}
-	</div>
+    <div
+        class="portfolio__items"
+        data-aos="fade-left"
+        data-aos-delay="300"
+        data-aos-duration="1500"
+        data-aos-offset="150"
+    >
+        {
+            projects.map(
+                proj =>
+                    proj.data.isPublished && (
+                        <PortfolioItem
+                            id={proj.id}
+                            title={proj.data.title}
+                            tags={proj.data.tags}
+                            image={proj.data.image}
+                            demoLink={proj.data["live-url"]}
+                            codeLink={proj.data["code-url"]}
+                            summary={proj.data.summary}
+                            concepts={proj.data.concepts}
+                        />
+                    ),
+            )
+        }
+    </div>
 </section>
