@@ -4,7 +4,7 @@ This repository contains the source code for my personal website.
 
 ## Project Overview
 
-As a front-end web developer, I built this personal website to show my experience and show off some projects.
+As a web engineer, I built this personal website to show my experience and show off some projects.
 
 You can visit my website or get in touch with me on [https://ivan-rodrigues.com](https://ivan-rodrigues.com)
 
